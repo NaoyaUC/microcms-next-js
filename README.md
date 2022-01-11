@@ -32,3 +32,50 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+Installing dependencies:
+- react
+- react-dom
+- next
+
+
+added 290 packages, and audited 291 packages in 30s
+
+51 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Installing devDependencies:
+- eslint
+- eslint-config-next
+
+
+added 173 packages, and audited 464 packages in 20s
+
+84 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Initialized a git repository.
+
+Success! Created microcms-nextjs-blog at C:\Users\User\Documents\Pg_practice\microcms-nextjs-blog
+Inside that directory, you can run several commands:
+
+  npm run dev
+    Starts the development server.
+
+  npm run build
+    Builds the app for production.
+
+  npm start
+    Runs the built app in production mode.
+
+We suggest that you begin by typing:
+
+  cd microcms-nextjs-blog
+  npm run dev
