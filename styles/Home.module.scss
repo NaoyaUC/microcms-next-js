@@ -12,6 +12,8 @@
 }
 
 .post {
+  max-width: 800px;
+  margin: 0 auto;
   & > h1 {
     font-size: 30px;
     font-weight: bold;
