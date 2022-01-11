@@ -1,16 +1,19 @@
 import { client } from "../../libs/client";
+import styles from "../../styles/Home.module.scss";
 
 export default function BlogId({news}){
   return (
-    <main>
-      <h1>{news.title}</h1>
-      <p>{news.publishedAt}</p>
-      <div dangerouslySetInnerHTML={{ 
-        __html:`${news.content}`,
-      }}
+    <main className={styles.main}>
+      <h1 className={styles.title}>{news.title}</h1>
+      <p className={styles.publishedAt}>{news.publishedAt}</p>
+      <div
+        className={styles.post}
+        dangerouslySetInnerHTML={{
+          __html: `${news.content}`,
+        }}
       />
     </main>
-  )
+  );
 }
 
 //静的生成の為のPATHを指定
