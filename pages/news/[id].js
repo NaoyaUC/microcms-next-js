@@ -2,31 +2,38 @@ import { client } from "../../libs/client";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function BlogId({news}){
-
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{news.title}</h1>
-      <Image
-        src={news.thumbnail.url}
-        width={news.thumbnail.width}
-        height={news.thumbnail.height} 
-        alt={news.title}
-      />
+    <>
+      <Head>
+        <title>Nao-uc | {news.title}</title>
+        <meta name="description" content="潰瘍性大腸炎持ちのプログラマー" />
+      </Head>
+      
+      <main className={styles.main}>
+        <h1 className={styles.title}>{news.title}</h1>
+        <Image
+          src={news.thumbnail.url}
+          width={news.thumbnail.width}
+          height={news.thumbnail.height}
+          alt={news.title}
+        />
 
-      <p className={styles.publishedAt}>{news.publishedAt}</p>
-      <div
-        className={styles.post}
-        dangerouslySetInnerHTML={{
-          __html: `${news.content}`,
-        }}
-      />
+        <p className={styles.publishedAt}>{news.publishedAt}</p>
+        <div
+          className={styles.post}
+          dangerouslySetInnerHTML={{
+            __html: `${news.content}`,
+          }}
+        />
 
-      <Link href={"/"}>
-        <a>homeに戻る</a>
-      </Link>
-    </main>
+        <Link href={"/"}>
+          <a>homeに戻る</a>
+        </Link>
+      </main>
+    </>
   );
 }
 
