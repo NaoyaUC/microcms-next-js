@@ -5,6 +5,7 @@ import { client } from '../libs/client'
 import styles from "../styles/Home.module.scss";
 import Date from '../libs/date';
 
+
 export default function Home({news}) {
   return (
     <>
@@ -14,6 +15,16 @@ export default function Home({news}) {
       </Head>
 
       <div className={styles.main}>
+        <div className={styles.homePhoto}>
+          <Image
+            src="/img/home.jpg"
+            alt="blog"
+            width={800}
+            height={400}
+            layout="responsive"
+          ></Image>
+        </div>
+
         <div className={styles.grid__container}>
           {news.map((news) => (
             <div key={news.id}>
