@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { client } from '../libs/client'
 import styles from "../styles/Home.module.scss";
+import Date from '../libs/date';
 
 export default function Home({news}) {
   return (
@@ -13,15 +14,19 @@ export default function Home({news}) {
       </Head>
 
       <div className={styles.main}>
-        <ul>
+        <div className={styles.grid__container}>
           {news.map((news) => (
-            <li key={news.id}>
+            <div key={news.id}>
               <Link href={`/news/${news.id}`}>
-                <a>{news.title}</a>
+                <a>
+                  {news.title}
+                  <br />
+                  <Date dateString={news.publishedAt} />
+                </a>
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

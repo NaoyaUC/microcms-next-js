@@ -3,6 +3,7 @@ import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import Date from "../../libs/date";
 
 export default function BlogId({news}){
   return (
@@ -11,17 +12,19 @@ export default function BlogId({news}){
         <title>Nao-uc | {news.title}</title>
         <meta name="description" content="潰瘍性大腸炎持ちのプログラマー" />
       </Head>
-      
+
       <main className={styles.main}>
         <h1 className={styles.title}>{news.title}</h1>
-        <Image
-          src={news.thumbnail.url}
-          width={news.thumbnail.width}
-          height={news.thumbnail.height}
-          alt={news.title}
-        />
+        <Date dateString={news.publishedAt} />
 
-        <p className={styles.publishedAt}>{news.publishedAt}</p>
+        <div>
+          <Image
+            src={news.thumbnail.url}
+            width={news.thumbnail.width}
+            height={news.thumbnail.height}
+            alt={news.title}
+          />
+        </div>
         <div
           className={styles.post}
           dangerouslySetInnerHTML={{
