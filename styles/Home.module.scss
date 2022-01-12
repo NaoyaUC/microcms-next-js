@@ -1,17 +1,13 @@
 .main {
   width: 960px;
   margin: 0 auto;
-  padding:8px;
+  padding:8px 16px;
   margin:8px;
   box-shadow: 0 0 4px #ccc;
 }
 
 .title {
   margin-bottom: 20px;
-}
-
-.publishedAt {
-  margin-bottom: 40px;
 }
 
 .post {
@@ -39,5 +35,19 @@
   & > ol {
     list-style-type: decimal;
     list-style-position: inside;
+  }
+}
+
+.grid__container{
+  display: grid;  
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+
+  & > div{
+    box-shadow: 0 0 4px #333;
+    padding:8px;
+  }
+  & a{
+    display: block;
   }
 }

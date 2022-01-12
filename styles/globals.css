@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+header,footer{
+  padding: 8px;
+  height:100px;
+  background-color: rgb(41, 84, 224);
+  text-align: center;
+}

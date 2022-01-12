@@ -5,8 +5,8 @@ import Sidebar from '../libs/sidebar';
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-      <Sidebar />
       <Component {...pageProps} />
+      <Sidebar />
     </Layout>
   );
 }
