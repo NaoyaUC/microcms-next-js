@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -16,9 +20,9 @@ a {
 }
 
 
-header,footer{
+header, footer {
   padding: 8px;
-  height:100px;
+  height: 100px;
   background-color: rgb(41, 84, 224);
   text-align: center;
 }

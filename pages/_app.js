@@ -1,6 +1,6 @@
 import '../styles/globals.css'
-import Layout from '../libs/layout'
-import Sidebar from '../libs/sidebar';
+import Layout from '../components/layout'
+import Sidebar from '../components/sidebar';
 
 function MyApp({ Component, pageProps }) {
   return (
