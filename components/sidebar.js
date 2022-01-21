@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className="px-3 bg-gray-50">
+    <div className="hidden sm:hidden md:hidden lg:block xl:block px-3 bg-gray-50">
       <div className="my-2">
         <input className="py-2 px-4 w-full" placeholder="Search..." />
       </div>

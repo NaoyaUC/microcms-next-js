@@ -15,21 +15,22 @@ export default function Home({news}) {
       </Head>
 
       <div className={styles.main}>
-        <div className={styles.homePhoto}>
+        <div className={(styles.homePhoto, "w-full", "mb-6")}>
           <Image
             src="/img/home.jpg"
             alt="blog"
-            width={800}
-            height={400}
+            width={480}
+            height={320}
             layout="responsive"
+            // layout="fill"
           ></Image>
         </div>
 
-        <div className={styles.grid__container}>
+        <div className="grid grid-cols-3 gap-2">
           {news.map((news) => (
             <div key={news.id}>
               <Link href={`/news/${news.id}`}>
-                <a>
+                <a className="block shadow p-2 hover:bg-red-50">
                   {news.title}
                   <br />
                   <Date dateString={news.publishedAt} />

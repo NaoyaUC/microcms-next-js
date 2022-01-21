@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import Date from "../../libs/date";
+import SnsShare from "../../components/snsShare";
 
 export default function BlogId({news}){
   return (
@@ -14,7 +15,8 @@ export default function BlogId({news}){
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{news.title}</h1>
+        <h1 className="text-2xl">{news.title}</h1>
+
         <Date dateString={news.publishedAt} />
 
         <div>
@@ -32,9 +34,7 @@ export default function BlogId({news}){
           }}
         />
 
-        <Link href={"/"}>
-          <a>homeに戻る</a>
-        </Link>
+        <SnsShare postData={news} />
       </main>
     </>
   );
