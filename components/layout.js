@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Sidebar from "../components/sidebar";
 // import { client } from "./client";
+import Drawer from "./Drawer";
 
 export default function Layout({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  
   const siteName = process.env.NEXT_PUBLIC_HOME_NAME;
   return (
     <>
@@ -24,7 +28,7 @@ export default function Layout({ children }) {
               </a>
             </Link>
             <div className="block sm:block md:block lg:hidden xl:hidden ml-5">
-              <button id="humberger">
+              <button id="humberger" onClick={() => setIsOpen(true)}>
                 <div></div>
                 <div></div>
                 <div></div>
@@ -64,6 +68,8 @@ export default function Layout({ children }) {
         <div className="hidden  lg:block  xl:hidden">lg</div>
         <div className="hidden sm:hidden md:hidden lg:hidden xl:block">xl</div>
       </div> */}
+
+      <Drawer isOpen={isOpen} setIsOpen={setIsOpen}/>
 
       <footer className="bg-blue-600 p-2 text-center">
         <div className="text-center">
