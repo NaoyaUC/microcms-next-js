@@ -1,7 +1,6 @@
 import { client } from "../../libs/client";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
-import Link from "next/link";
 import Head from "next/head";
 import Date from "../../libs/date";
 import SnsShare from "../../components/snsShare";
@@ -19,7 +18,7 @@ export default function BlogId({news}){
 
         <Date dateString={news.publishedAt} />
 
-        <div>
+        <div className="w-full">
           <Image
             src={news.thumbnail.url}
             width={news.thumbnail.width}
@@ -34,7 +33,7 @@ export default function BlogId({news}){
           }}
         />
 
-        <SnsShare postData={news} />
+        <SnsShare url={"/news/" + news.id} title={news.title} />
       </main>
     </>
   );
